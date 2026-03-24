@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 214.32 214.32">
+  <defs>
+    <style>
+      .d {
+        stroke-width: 7px;
+      }
+
+      .d, .e, .f {
+        fill: none;
+      }
+
+      .d, .f {
+        stroke: #1d1d1b;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .e {
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 8px;
+      }
+
+      .f {
+        stroke-width: 6px;
+      }
+    </style>
+  </defs>
+  <g id="c" data-name="Ebene 2">
+    <polyline class="d" points="42.24 91.47 105.09 43.89 134.83 66.9 134.83 53.71 145.69 53.71 145.69 74.66 167.94 91.99"/>
+    <polyline class="d" points="52.59 85.78 52.59 161.56 158.63 161.56 158.63 86.3"/>
+    <line class="f" x1="76.12" y1="112.42" x2="134.06" y2="112.42"/>
+    <line class="f" x1="76.12" y1="129.23" x2="134.06" y2="129.23"/>
+    <rect class="e" x="4" y="4" width="206.32" height="206.32" rx="53.27" ry="53.27"/>
+  </g>
+</svg>

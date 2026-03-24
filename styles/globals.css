@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme{
+    --color-bgLight:  #F0F2F4;
+    --color-textLight: #313131;
+    --color-accentLight: #63A4B5;
+    
+    --color-bgDark: #313131;
+    --color-textDark: #F0F2F4;
+    --color-accentDark: #A5CDD9;
+
+}
+
+
+html, body {
+  scroll-behavior: smooth;
+}
+
+  
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Globale Abstände */
+section {
+  @apply mb-16;  /* 4rem margin-bottom */
+}
+
+h2 {
+  @apply mb-8; /* 2rem margin-bottom */
+}
+
+.container {
+  @apply px-4 py-8;  /* 1rem padding horizontal und 2rem vertical */
+}
+
+/* Abstand zwischen Abschnitten und weiteren globalen Elementen */
+main {
+  @apply pt-10 pb-10;  /* 2.5rem oben und unten */
+}
+
+footer {
+  @apply pt-6 pb-6; /* 1.5rem padding oben und unten */
+}
+
+
+  
+  
+  

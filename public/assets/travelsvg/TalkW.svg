@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 214.32 214.32">
+  <defs>
+    <style>
+      .d {
+        stroke-miterlimit: 10;
+        stroke-width: 8px;
+      }
+
+      .d, .e {
+        fill: none;
+        stroke: #fff;
+      }
+
+      .e {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 6px;
+      }
+    </style>
+  </defs>
+  <g id="c" data-name="Ebene 2">
+    <path class="e" d="M80.03,151.43s-24.08,8.8-32.47,6.93c0,0,13.6-14.87,8.93-25.47-4-9.09-24.09-30.92,1.76-61.69,1.62-1.93,7.35-6.91,9.38-8.39,13.26-9.64,42.12-23.91,76.6-5.32,41.49,22.38,29.14,62.47,20.98,72.49-8.16,10.02-25.64,24.71-41.26,27.04s-32.63-2.56-32.63-2.56"/>
+    <ellipse class="e" cx="110.12" cy="87.37" rx="11.07" ry="13.04"/>
+    <path class="e" d="M85.06,130.68s6.34-20.58,25.36-20.58,25.24,20.22,25.24,20.22"/>
+    <rect class="d" x="4" y="4" width="206.32" height="206.32" rx="53.27" ry="53.27"/>
+  </g>
+</svg>

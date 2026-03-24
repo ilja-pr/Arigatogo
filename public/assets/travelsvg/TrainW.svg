@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 214.32 214.32">
+  <defs>
+    <style>
+      .d {
+        stroke-width: 8px;
+      }
+
+      .d, .e {
+        stroke-miterlimit: 10;
+      }
+
+      .d, .e, .f, .g {
+        fill: none;
+        stroke: #fff;
+      }
+
+      .e, .f {
+        stroke-width: 6px;
+      }
+
+      .f, .g {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .g {
+        stroke-width: 5px;
+      }
+    </style>
+  </defs>
+  <g id="c" data-name="Ebene 2">
+    <path class="e" d="M41.64,60.04s51.23-3.5,106.71,33.74c0,0,31.99,18.49,32.24,30.49.25,12-8.5,13-14.99,13.25-6.5.25-38.24.25-38.24.25"/>
+    <path class="f" d="M42.64,138.26s57.48-1.75,64.48.75c7,2.5,13.99,12.5,19.49,12.75,5.5.25,35.99,0,35.99,0l-9.75-13"/>
+    <path class="f" d="M50.38,139.51s3,11.25,12.25,11.25,12-11,12-11"/>
+    <path class="f" d="M85.12,139.51s3,11.25,12.25,11.25,12-11,12-11"/>
+    <path class="f" d="M76.12,64.54s9.75,21.49,36.74,25.49c26.99,4,36.99,5.75,36.99,5.75"/>
+    <path class="g" d="M43.43,94.49s55.2,3.25,81.39,15.24c0,0,2.12,10.75-3.77,9.75s-76.2-6.25-77.61-6"/>
+    <line class="g" x1="58" y1="95.74" x2="58" y2="113.73"/>
+    <line class="g" x1="82.18" y1="99.49" x2="82.18" y2="113.73"/>
+    <line class="g" x1="103.74" y1="104.99" x2="103.74" y2="116.05"/>
+    <rect class="d" x="4" y="4" width="206.32" height="206.32" rx="53.27" ry="53.27"/>
+  </g>
+</svg>

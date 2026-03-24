@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 214.32 214.32">
+  <defs>
+    <style>
+      .d {
+        stroke-miterlimit: 10;
+        stroke-width: 8px;
+      }
+
+      .d, .e, .f, .g {
+        fill: none;
+        stroke: #fff;
+      }
+
+      .h {
+        fill: #fff;
+      }
+
+      .e {
+        stroke-width: 7px;
+      }
+
+      .e, .f, .g {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .f {
+        stroke-width: 6px;
+      }
+
+      .g {
+        stroke-width: 5px;
+      }
+    </style>
+  </defs>
+  <g id="c" data-name="Ebene 2">
+    <rect class="e" x="41.26" y="61.7" width="124.99" height="86.53" rx="12.73" ry="12.73"/>
+    <rect class="f" x="55.05" y="88.31" width="56.63" height="43.8" rx="5.72" ry="5.72"/>
+    <circle class="h" cx="122.9" cy="129.39" r="2.48"/>
+    <circle class="h" cx="131.1" cy="129.39" r="2.48"/>
+    <circle class="h" cx="139.3" cy="129.39" r="2.48"/>
+    <circle class="h" cx="147.69" cy="129.39" r="2.48"/>
+    <path class="g" d="M73.19,87.32v-6.24c0-2.17,1.77-3.93,3.95-3.93h11.91c2.09,0,3.78,1.68,3.78,3.76v6.49"/>
+    <rect class="h" x="63.14" y="88.98" width="4.72" height="42.59"/>
+    <rect class="h" x="98.83" y="88.98" width="4.72" height="42.59"/>
+    <rect class="d" x="4" y="4" width="206.32" height="206.32" rx="53.27" ry="53.27"/>
+  </g>
+</svg>
