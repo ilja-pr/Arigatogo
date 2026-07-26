@@ -48,9 +48,8 @@ const Footer = () => {
               Rechtliches
             </h3>
             <ul className="space-y-2.5">
-              <li><a href="#" className="hover:text-accentLight dark:hover:text-accentDark transition-colors">Impressum</a></li>
-              <li><a href="#" className="hover:text-accentLight dark:hover:text-accentDark transition-colors">Datenschutz</a></li>
-              <li><a href="#" className="hover:text-accentLight dark:hover:text-accentDark transition-colors">AGB</a></li>
+              <li><Link href="/impressum" className="hover:text-accentLight dark:hover:text-accentDark transition-colors">Impressum</Link></li>
+              <li><Link href="/datenschutz" className="hover:text-accentLight dark:hover:text-accentDark transition-colors">Datenschutz</Link></li>
             </ul>
           </div>
         </div>

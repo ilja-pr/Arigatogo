@@ -24,9 +24,10 @@
   --color-paperDark: #1C2029;      /* angehobene Fläche im Dark Mode */
   --color-gold: #C9A24B;           /* Kin – sparsames Gold-Detail */
 
-  /* Typografie */
-  --font-display: "Shippori Mincho", "Hiragino Mincho ProN", serif;
-  --font-body: "Zen Kaku Gothic New", "Hiragino Sans", sans-serif;
+  /* Typografie – Fallbacks; die echten Fonts setzt next/font
+     als CSS-Variablen auf .app-root (siehe _app.js) */
+  --font-display: "Hiragino Mincho ProN", "Yu Mincho", Georgia, serif;
+  --font-body: "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
 }
 
 html {
@@ -42,9 +43,13 @@ html {
 }
 
 body {
-  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+/* Wurzel-Element der App: hier greifen die next/font-Variablen */
+.app-root {
+  font-family: var(--font-body);
 }
 
 /* Überschriften global in Mincho-Serif → jede Seite profitiert sofort */
