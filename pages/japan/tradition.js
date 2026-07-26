@@ -1,6 +1,5 @@
 'use client';
 
-import LayoutWrapper from '@/components/LayoutWrapper';
 import HeroDefault from '@/components/HeroDefault';
 import ContentSection from '@/components/ContentSection';
 
@@ -8,9 +7,10 @@ export default function Tradition() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 
   return (
-    <LayoutWrapper>
+    <>
       <HeroDefault
         title="Traditionen Japans"
+        eyebrow="伝統 · Tradition"
         textLines={[
           'Erkunde die lebendigen Traditionen Japans, die bis heute das kulturelle Leben prägen.',
           'Vom Teezeremoniell bis zu den Festen – die Vielfalt ist faszinierend.',
@@ -48,6 +48,6 @@ export default function Tradition() {
           ]}
         />
       </div>
-    </LayoutWrapper>
+    </>
   );
 }

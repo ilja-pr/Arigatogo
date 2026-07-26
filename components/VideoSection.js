@@ -33,7 +33,7 @@ const VideoSection = ({
         </p>
       </div>
 
-      <div className="relative max-w-6xl mx-auto rounded-xl overflow-hidden shadow-lg border border-border dark:border-white/10 bg-black">
+      <div className="relative max-w-6xl mx-auto rounded-2xl overflow-hidden shadow-2xl shadow-black/20 dark:shadow-black/50 ring-1 ring-black/10 dark:ring-white/10 bg-black">
         {!isLoaded && (
           <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/50">
             <div className="h-10 w-10 border-4 border-accentLight dark:border-accentDark border-t-transparent rounded-full animate-spin" />

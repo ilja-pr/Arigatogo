@@ -1,59 +1,147 @@
 @import "tailwindcss";
 
-
 @custom-variant dark (&:where(.dark, .dark *));
 
-@theme{
-    --color-bgLight:  #F0F2F4;
-    --color-textLight: #313131;
-    --color-accentLight: #63A4B5;
-    
-    --color-bgDark: #313131;
-    --color-textDark: #F0F2F4;
-    --color-accentDark: #A5CDD9;
+/* ─────────────────────────────────────────────
+   Arigatogo Design-Tokens · "Washi & Hinomaru"
+   Papierweiß, Sumi-Tinte, Torii-Rot, Ai-Indigo
+   ───────────────────────────────────────────── */
+@theme {
+  /* Light Mode — Washi-Papier & Sumi */
+  --color-bgLight: #FAF7F0;        /* Kinari – ungebleichtes Papier */
+  --color-textLight: #22262E;      /* Sumi – Tuschetinte */
+  --color-accentLight: #C4372F;    /* Shu – Torii-Zinnoberrot */
 
+  /* Dark Mode — Nachtindigo & warmes Rot */
+  --color-bgDark: #14171E;         /* Yoru – Nachttinte mit Blaustich */
+  --color-textDark: #EDEAE2;       /* warmes Papierweiß */
+  --color-accentDark: #E4685C;     /* aufgehelltes Shu für Kontrast */
+
+  /* Ergänzende Töne */
+  --color-inkSoft: #5C6270;        /* verdünnte Tusche – Sekundärtext */
+  --color-indigo: #2E4A6B;         /* Ai – Aizome-Indigo */
+  --color-paper: #F1EDE3;          /* dunkleres Papier für Flächen */
+  --color-paperDark: #1C2029;      /* angehobene Fläche im Dark Mode */
+  --color-gold: #C9A24B;           /* Kin – sparsames Gold-Detail */
+
+  /* Typografie */
+  --font-display: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+  --font-body: "Zen Kaku Gothic New", "Hiragino Sans", sans-serif;
 }
 
-
-html, body {
+html {
   scroll-behavior: smooth;
 }
 
-  
-  @keyframes fade-in-up {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
   }
-
-  /* Globale Abstände */
-section {
-  @apply mb-16;  /* 4rem margin-bottom */
 }
 
-h2 {
-  @apply mb-8; /* 2rem margin-bottom */
+body {
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-.container {
-  @apply px-4 py-8;  /* 1rem padding horizontal und 2rem vertical */
+/* Überschriften global in Mincho-Serif → jede Seite profitiert sofort */
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
-/* Abstand zwischen Abschnitten und weiteren globalen Elementen */
-main {
-  @apply pt-10 pb-10;  /* 2.5rem oben und unten */
+::selection {
+  background: var(--color-accentLight);
+  color: #fff;
+}
+.dark ::selection {
+  background: var(--color-accentDark);
+  color: var(--color-bgDark);
 }
 
-footer {
-  @apply pt-6 pb-6; /* 1.5rem padding oben und unten */
+/* Sichtbarer Tastatur-Fokus */
+:focus-visible {
+  outline: 2px solid var(--color-accentLight);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+.dark :focus-visible {
+  outline-color: var(--color-accentDark);
 }
 
+/* Vertikale Schrift (Tategaki) für Sektions-Labels */
+.tategaki {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: 0.35em;
+}
 
-  
-  
-  
+/* Feine Papier-Textur-Linie unter Sektionsüberschriften */
+.heading-rule {
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+.heading-rule::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 3.5rem;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--color-accentLight);
+}
+.dark .heading-rule::after {
+  background: var(--color-accentDark);
+}
+.heading-rule.rule-center::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* Auf kleinen Screens (zentrierter Text) Linie mittig */
+@media (max-width: 1023.98px) {
+  .heading-rule.rule-responsive::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Globale Abstände */
+section { @apply mb-16; }
+h2 { @apply mb-8; }
+.container { @apply px-4 py-8; }
+main { @apply pt-0 pb-10; }
+footer { @apply pt-6 pb-6; }
+
+/* Anker-Ziele nicht unter der fixen Navbar verstecken */
+[id] {
+  scroll-margin-top: 6rem;
+}
+
+/* Swiper-Pagination im Marken-Look */
+.swiper-pagination-bullet {
+  background: var(--color-inkSoft);
+  opacity: 0.5;
+}
+.swiper-pagination-bullet-active {
+  background: var(--color-accentLight);
+  opacity: 1;
+}
+.dark .swiper-pagination-bullet-active {
+  background: var(--color-accentDark);
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.45);
+  transform: scale(0.7);
+}

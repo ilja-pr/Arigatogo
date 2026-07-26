@@ -1,9 +1,9 @@
 'use client';
 
-import LayoutWrapper from '@/components/LayoutWrapper';
 import HeroDefault from '@/components/HeroDefault';
 import ContentSection from '@/components/ContentSection';
 import VideoSection from '@/components/VideoSection';
+import FactsStrip from '@/components/FactsStrip';
 
 export default function Tokyo() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
@@ -11,9 +11,10 @@ export default function Tokyo() {
   const videoPathMobile = `${basePath}/assets/video/tokyo_video_square.mp4`;
 
   return (
-    <LayoutWrapper>
+    <>
       <HeroDefault
         title="Tokyo"
+        eyebrow="東京 · Hauptstadt"
         textLines={[
           'Tauche ein in die Vielfalt der Hauptstadt Japans.',
           'Von Shibuya bis Asakusa – entdecke Tokyo auf eigene Weise.',
@@ -21,6 +22,13 @@ export default function Tokyo() {
         backgroundImage={null}
       />
          <div id="after-hero" />
+
+      <FactsStrip facts={[
+    { label: 'Einwohner', value: '≈ 14 Mio.' },
+    { label: 'Stadtbezirke', value: '23' },
+    { label: 'Beste Reisezeit', value: 'Mär–Mai · Okt–Nov' },
+    { label: 'Ab Flughafen', value: '≈ 40 Min.' },
+  ]} />
 
       <VideoSection
         videoSrc={videoPath}
@@ -33,22 +41,31 @@ export default function Tokyo() {
         <ContentSection
           image={`${basePath}/assets/img/img_tokyo/tokyo_turm.webp`}
           title="Tokyo Tower"
-          text="Genießen Sie den atemberaubenden Ausblick auf die Stadt von der Aussichtsplattform des berühmten Tokyo Tower."
+          text={[
+            'Genieße den Ausblick über das Häusermeer von der Aussichtsplattform des Tokyo Tower – abends besonders eindrucksvoll.',
+            'Tipp: Wer höher hinaus will, fährt zum Tokyo Skytree (634 m), dem höchsten Turm Japans.',
+          ]}
         />
 
         <ContentSection
           image={`${basePath}/assets/img/img_tokyo/tokyo_cosplay.webp`}
           title="Akihabara"
-          text="Tauchen Sie ein in die Welt der Elektronik und des Anime – Akihabara ist das Mekka für Technik- und Popkultur-Fans."
+          text={[
+            'Tauche ein in die Welt von Elektronik, Anime und Gaming – Akihabara ist das Mekka für Technik- und Popkultur-Fans.',
+            'Zwischen Retro-Game-Läden und mehrstöckigen Arcades vergeht hier ein Nachmittag wie im Flug.',
+          ]}
           reverse
         />
 
         <ContentSection
           image={`${basePath}/assets/img/img_tokyo/tokyo_asakusa_schrein.webp`}
-          title="Meiji-Schrein"
-          text="Erleben Sie die Ruhe und Spiritualität des historischen Meiji-Schreins – ein Ort der Entschleunigung inmitten der Metropole."
+          title="Senso-ji in Asakusa"
+          text={[
+            'Erlebe Tokyos ältesten Tempel: Durch das Kaminarimon-Tor und die Ladenstraße Nakamise geht es zum Senso-ji.',
+            'Früh morgens ist es hier am ruhigsten – dann gehört der Tempel fast dir allein.',
+          ]}
         />
       </div>
-    </LayoutWrapper>
+    </>
   );
 }

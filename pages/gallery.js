@@ -1,6 +1,5 @@
 'use client';
 
-import LayoutWrapper from '@/components/LayoutWrapper';
 import HeroDefault from '@/components/HeroDefault';
 import CityCarousel from '@/components/CityCarousel';
 import { motion } from 'framer-motion';
@@ -43,25 +42,26 @@ const cities = [
 
 export default function Gallery() {
   return (
-    <LayoutWrapper>
+    <>
       <HeroDefault
-        title="City Gallery"
+        title="Städte"
+        eyebrow="三都物語 · Drei Städte"
         textLines={[
-          'Willst du mehr über Japan erfahren?',
-          'Diese Galerie zeigt dir faszinierende Eindrücke aus Japans schönsten Städten.',
+          'Tokyo, Kyoto, Osaka – drei Städte, drei Charaktere.',
+          'Eindrücke aus Japans schönsten Metropolen.',
         ]}
       />
        <div id="after-hero" />
 
       {/* Sticky Navigation */}
-      <div className="sticky top-0 z-30 bg-bgLight/80 dark:bg-bgDark/80 backdrop-blur-md border-b border-textLight/10 dark:border-textDark/10">
+      <div className="sticky top-20 z-30 bg-bgLight/85 dark:bg-bgDark/85 backdrop-blur-md border-b border-black/5 dark:border-white/5">
         <div className="max-w-7xl mx-auto flex gap-2 sm:gap-4 overflow-x-auto px-4 py-4">
           {cities.map((city) => (
             <Link
               key={city.id}
               href={`#${city.id}`}
               aria-label={`Zur Galerie von ${city.name}`}
-              className="px-5 py-2 text-sm sm:text-base bg-accentLight dark:bg-accentDark text-white dark:text-bgDark rounded-full whitespace-nowrap hover:opacity-90 hover:scale-105 transition"
+              className="px-5 py-2 text-sm sm:text-base rounded-full whitespace-nowrap border border-textLight/15 dark:border-textDark/15 text-textLight/80 dark:text-textDark/80 hover:border-accentLight dark:hover:border-accentDark hover:text-accentLight dark:hover:text-accentDark transition-colors"
             >
               {city.name}
             </Link>
@@ -75,10 +75,10 @@ export default function Gallery() {
           <motion.section
             id={city.id}
             key={city.id}
-            className="py-32 scroll-mt-28"
-            initial={{ opacity: 0, y: 60 }}
+            className="py-24 scroll-mt-40"
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: index * 0.1, ease: 'easeOut' }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
             viewport={{ once: true }}
           >
             <h2 className="text-3xl sm:text-4xl font-bold mb-10 text-accentLight dark:text-accentDark">
@@ -88,6 +88,6 @@ export default function Gallery() {
           </motion.section>
         ))}
       </div>
-    </LayoutWrapper>
+    </>
   );
 }

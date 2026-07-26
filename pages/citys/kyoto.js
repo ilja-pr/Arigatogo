@@ -1,9 +1,9 @@
 'use client';
 
-import LayoutWrapper from '@/components/LayoutWrapper';
 import HeroDefault from '@/components/HeroDefault';
 import ContentSection from '@/components/ContentSection';
 import VideoSection from '@/components/VideoSection';
+import FactsStrip from '@/components/FactsStrip';
 
 export default function Kyoto() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
@@ -11,9 +11,10 @@ export default function Kyoto() {
   const videoPathMobile = `${basePath}/assets/video/kyoto_video_square.mp4`;
 
   return (
-    <LayoutWrapper>
+    <>
       <HeroDefault
         title="Kyoto"
+        eyebrow="京都 · Kaiserstadt"
         textLines={[
           'Willkommen in der alten Kaiserstadt.',
           'Hier verschmelzen Zen-Gärten, Geishas und Geschichte zu einem einzigartigen Erlebnis.',
@@ -21,6 +22,13 @@ export default function Kyoto() {
         backgroundImage={null}
       />
          <div id="after-hero" />
+
+      <FactsStrip facts={[
+    { label: 'Tempel & Schreine', value: '1.600+' },
+    { label: 'UNESCO-Stätten', value: '17' },
+    { label: 'Beste Reisezeit', value: 'Apr · Nov' },
+    { label: 'Ab Tokyo (Zug)', value: '≈ 2¼ Std.' },
+  ]} />
 
       <VideoSection
         videoSrc={videoPath}
@@ -38,15 +46,21 @@ export default function Kyoto() {
         <ContentSection
           image={`${basePath}/assets/img/img_kyoto/kyoto_omlett_1.webp`}
           title="Kinkaku-ji (Goldener Pavillon)"
-          text="Bewundern Sie die prächtige goldene Fassade dieses ikonischen Tempels, der sich malerisch in einem ruhigen Teich spiegelt."
+          text={[
+            'Bewundere die goldene Fassade des Kinkaku-ji, die sich malerisch im stillen Teich spiegelt.',
+            'Der Zen-Tempel gehört zum UNESCO-Welterbe und ist eines der meistfotografierten Motive Japans.',
+          ]}
           reverse
         />
         <ContentSection
           image={`${basePath}/assets/img/img_kyoto/kyoto_sushi_1.webp`}
           title="Arashiyama Bambuswald"
-          text="Spazieren Sie durch den berühmten Bambuswald und erleben Sie die mystische Atmosphäre der Natur auf einzigartige Weise."
+          text={[
+            'Spaziere durch den berühmten Bambuswald von Arashiyama und lausche dem Knarren der Halme im Wind.',
+            'Kombiniere den Besuch mit dem Togetsukyo-Brücken-Panorama und einer Bootsfahrt auf dem Hozugawa.',
+          ]}
         />
       </div>
-    </LayoutWrapper>
+    </>
   );
 }

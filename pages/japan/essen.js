@@ -1,6 +1,5 @@
 'use client';
 
-import LayoutWrapper from '@/components/LayoutWrapper';
 import HeroDefault from '@/components/HeroDefault';
 import ContentSection from '@/components/ContentSection';
 
@@ -8,9 +7,10 @@ export default function Essen() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 
   return (
-    <LayoutWrapper>
+    <>
       <HeroDefault
         title="Essen in Japan"
+        eyebrow="食 · Kulinarik"
         textLines={[
           'Willst du mehr über Japans Küche erfahren?',
           'Hier findest du alles über Sushi, Ramen und mehr.',
@@ -48,6 +48,6 @@ export default function Essen() {
           ]}
         />
       </div>
-    </LayoutWrapper>
+    </>
   );
 }

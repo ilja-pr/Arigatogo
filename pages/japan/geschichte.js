@@ -1,6 +1,5 @@
 'use client';
 
-import LayoutWrapper from '@/components/LayoutWrapper';
 import HeroDefault from '@/components/HeroDefault';
 import ContentSection from '@/components/ContentSection';
 
@@ -8,9 +7,10 @@ export default function Geschichte() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 
   return (
-    <LayoutWrapper>
+    <>
       <HeroDefault
         title="Japans Geschichte"
+        eyebrow="歴史 · Geschichte"
         textLines={['Eine faszinierende Reise durch Jahrhunderte']}
         backgroundImage={null}
       />
@@ -48,6 +48,6 @@ export default function Geschichte() {
           ]}
         />
       </div>
-    </LayoutWrapper>
+    </>
   );
 }

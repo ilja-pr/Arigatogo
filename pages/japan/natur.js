@@ -1,6 +1,5 @@
 'use client';
 
-import LayoutWrapper from '@/components/LayoutWrapper';
 import HeroDefault from '@/components/HeroDefault';
 import ContentSection from '@/components/ContentSection';
 
@@ -8,9 +7,10 @@ export default function Natur() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 
   return (
-    <LayoutWrapper>
+    <>
       <HeroDefault
         title="Natur in Japan"
+        eyebrow="自然 · Natur"
         textLines={[
           'Tauche ein in die beeindruckenden Landschaften Japans.',
           'Von majestätischen Bergen bis zu malerischen Küsten – Natur pur erwartet dich!',
@@ -51,6 +51,6 @@ export default function Natur() {
           ]}
         />
       </div>
-    </LayoutWrapper>
+    </>
   );
 }

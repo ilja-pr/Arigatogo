@@ -1,6 +1,5 @@
 'use client';
 
-import LayoutWrapper from '@/components/LayoutWrapper';
 import HeroDefault from '@/components/HeroDefault';
 import ContentSection from '@/components/ContentSection';
 
@@ -34,12 +33,13 @@ export default function Travel() {
   ];
 
   return (
-    <LayoutWrapper>
+    <>
         <HeroDefault
           title="Reiseinfos"
+          eyebrow="旅の準備 · Vorbereitung"
           textLines={[
-            'Du möchtest nach Japan reisen?',
-            'Hier findest du alle wichtigen Infos für deine perfekte Japan-Reise.',
+            'Gut vorbereitet ist halb angekommen.',
+            'Zehn Punkte, die deine Japan-Reise entspannter machen.',
           ]}
         />
 
@@ -47,31 +47,35 @@ export default function Travel() {
 
         {/* Icons */}
         <section className="mt-12 px-4 sm:px-8 lg:px-16 max-w-10xl mx-auto">
-          <h1 className="text-accentLight dark:text-accentDark text-4xl sm:text-5xl md:text-6xl font-extrabold mb-16 text-center pb-2">
+          <p className="text-sm font-medium tracking-[0.3em] uppercase text-accentLight dark:text-accentDark mb-3 text-center">Checkliste · チェックリスト</p>
+          <h1 className="heading-rule rule-center text-3xl sm:text-4xl md:text-5xl mb-14 text-center mx-auto w-fit">
             Checkliste für deine Japan-Reise
           </h1>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 text-textLight dark:text-textDark">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 sm:gap-5 text-textLight dark:text-textDark">
             {iconItems.map(({ base, label }, i) => (
               <button
                 key={i}
-                className="flex flex-col items-center text-center hover:text-accentLight dark:hover:text-accentDark transition-all duration-200"
+                className="group relative flex flex-col items-center text-center rounded-2xl bg-paper dark:bg-paperDark ring-1 ring-black/5 dark:ring-white/10 hover:ring-accentLight/40 dark:hover:ring-accentDark/40 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/5 dark:hover:shadow-black/30 px-4 py-6 transition-all duration-300"
                 onClick={() => {
                   const section = document.getElementById(labelToIdMap[label]);
                   section?.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
+                <span className="absolute top-2.5 left-3.5 text-xs font-semibold text-inkSoft/60 dark:text-textDark/40">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
                 <img
                   src={`${basePath}/assets/travelsvg/${base}B.svg`}
-                  alt={label}
-                  className="w-12 h-12 mb-2 block dark:hidden"
+                  alt=""
+                  className="w-11 h-11 mb-2.5 block dark:hidden transition-transform group-hover:scale-110"
                 />
                 <img
                   src={`${basePath}/assets/travelsvg/${base}W.svg`}
-                  alt={label}
-                  className="w-12 h-12 mb-2 hidden dark:block"
+                  alt=""
+                  className="w-11 h-11 mb-2.5 hidden dark:block transition-transform group-hover:scale-110"
                 />
-                <span className="text-sm font-medium">{label}</span>
+                <span className="text-sm font-medium group-hover:text-accentLight dark:group-hover:text-accentDark transition-colors">{label}</span>
               </button>
             ))}
           </div>
@@ -150,6 +154,6 @@ export default function Travel() {
             fullBg
           />
         </div>
-    </LayoutWrapper>
+    </>
   );
 }
